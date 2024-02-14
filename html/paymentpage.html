@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payement page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../css/paymentpage.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="left">
+            <div class="fustal-detail">
+                <div class="img-name-rating">
+                <img class="fustal-venuePic" src="../web-images/gautam chowk fustal.jpg">
+                <div class="name-rating">
+                    <h3 class="venue-name">chitwan fustal and sports zone</h3>
+                    <div class="star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="fustal-location">MC9H+R7R,Gautam Chowk, Bharatpur 7</p>
+                </div>
+            </div>
+            </div>
+
+
+            <div class="transaction">
+                <h1>Transaction Details</h1>
+                <h3>Online Booking</h3>
+                <!-- <h2>NPR</h2> -->
+                <p>Charge Per Hour: <span>Rs 1200.00</span> </p>
+                <p>Tax Amount: <span>0.00</span> </p>
+                <p>Service Charge: <span>0.00</span> </p>
+                <p class="total">Total Amount: <span>Rs 1200.00</span> </p>
+                <div class="payement-method">
+                    <button onclick="esewa()"><img src="../web-images/esewa.png"></button>
+                    <button onclick="khalti()"><img src="../web-images/khalti.jpeg"></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="right">
+            <h1 class="payement-name"></h1>
+            <div class="id">
+                <p>Id:</p>
+                <input id="inputValue" type="tel">
+            </div>
+        
+            <div class="password">
+                <p>Password:</p>
+                <input  id="inputValue" type="password">
+            </div>
+            <div class="amount">
+                <p>Amount:</p>
+                <input type="tel">
+            </div>
+
+            <textarea id="remark"  placeholder="Remarks"></textarea> <br>
+            <button class="submit-btn" onclick="openPopup()" type="submit">SUBMIT</button>
+        </div>
+    </div>
+    <div class="container-popup">
+        <div class="popup" id="popup">
+            <img src="../web-images/404-tick.png">
+            <h2>Thank You!</h2>
+            <p>Your transcation has been successfully completed. Thanks!</p>
+            <button type="button" onclick="closePopup()">OK</button>
+        </div>
+    </div>
+
+    <script>
+
+        // javascript ffor transaction success popup
+        let popup = document.getElementById('popup');
+      
+            function openPopup(){
+                popup.classList.add("open-popup");
+            document.querySelector(".container").style.opacity = 0.4;
+        }
+    
+
+        function closePopup() {
+            popup.classList.remove("open-popup");
+            window.location = "bookingPage.html";
+        }
+        
+        //  Js for wallet popup
+        let RightPopup = document.querySelector(".right");
+        let PayementName = document.querySelector(".payement-name");
+        let Submitbtn = document.querySelector(".submit-btn");
+        function esewa(){
+            RightPopup.classList.add("right-popup");
+            
+            PayementName.innerHTML = "Esewa";
+            PayementName.style.color = "#6fd649";
+            Submitbtn.style.backgroundColor = "#6fd649";
+        }
+
+        function khalti() {
+            RightPopup.classList.add("right-popup");
+            PayementName.innerHTML = "Khalti";
+            PayementName.style.color = "rgb(96,46,142)";
+            Submitbtn.style.backgroundColor = "rgb(96,46,142)";
+        }
+
+     
+
+    </script>
+</body>
+
+</html>

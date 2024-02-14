@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY Booking</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../css/mybooking.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <nav class="navbar" class="scroll">
+            <!-- Navbar gets inserted from JS -->
+        </nav>
+        <!-- Box contains fustal address call and BOOk now -->
+        <h3 class="day">Today <span>active</span></h3>
+        <div class="fustal-box1">
+
+            <div class="box-left">
+                <img class="fustal-venuePic" src="../web-images/gautam chowk fustal.jpg">
+
+                <div class="name-rating">
+                    <h3 class="venue-name">Chitwan futsal and sports zone</h3>
+                    <div class="star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="fustal-location">MC9H+R7R, Gautam Chowk, Bharatpur 7</p>
+                </div>
+
+            </div>
+
+            <div class="box-right">
+                <button class="close-btn"><i class="fa-solid fa-circle-xmark"></i> Cancel</button>
+                <button class="dir-call-btn"><i class="fa-solid fa-diamond-turn-right"></i> Direction</button>
+                <button class="dir-call-btn"><i class="fa-solid fa-phone"></i> Call now</button>
+                </button>
+                <button class="book-btn">Booked</button>
+            </div>
+        </div>
+
+        <h3 class="day">1 week ago <span>cancelled</span></h3>
+        <div class="fustal-box2">
+
+            <div class="box-left">
+                <img class="fustal-venuePic" src="../web-images/gautam chowk fustal.jpg">
+
+                <div class="name-rating">
+                    <h3 class="venue-name">Kshetrapur Fustal Arena</h3>
+                    <div class="star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="fustal-location">MCWJ+VPR Road, Bharatpur 44200</p>
+                </div>
+            </div>
+
+            <div class="box-right">
+                <button class="dir-call-btn"><i class="fa-solid fa-diamond-turn-right"></i> Direction</button>
+                <button class="dir-call-btn"><i class="fa-solid fa-phone"></i> Call now</button>
+                <button class="book-btn">Cancelled</button>
+            </div>
+        </div>
+
+        <h3 class="day">2 weeks ago <span>expired</span></h3>
+        <div class="fustal-box3">
+
+            <div class="box-left">
+                <img class="fustal-venuePic" src="../web-images/gautam chowk fustal.jpg">
+
+                <div class="name-rating">
+                    <h3 class="venue-name">The Sharadpur futsal</h3>
+                    <div class="star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="fustal-location">MC7J+FJ2, Bharatpur 44200</p>
+                </div>
+            </div>
+
+            <div class="box-right">
+                <button class="dir-call-btn"><i class="fa-solid fa-diamond-turn-right"></i> Direction</button>
+                <button class="dir-call-btn"><i class="fa-solid fa-phone"></i> Call now</button>
+                <button class="book-btn">Booked</button>
+            </div>
+        </div>
+        
+        <div id="footer-section">
+            <!-- Footer section will get filled by navbar.js -->
+        </div>
+
+    </div>
+
+    <script src="../js/navbar.js"></script>
+</body>
+
+</html>

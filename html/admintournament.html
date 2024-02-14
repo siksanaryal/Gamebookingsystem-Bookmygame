@@ -1,0 +1,133 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notify</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="../css/admintournament.css">
+</head>
+<body>
+    <div class="container">
+        
+        <div class="left">
+            <div id="bar" >
+                <i class="fa-solid fa-bars" onclick='updatemenu()'></i>
+            </div>
+            <div id="close" >
+                 <i class="fa-solid fa-x" onclick='closebar()'></i> 
+            </div>
+    
+            <div class="lists">
+                <h4><span>Book</span>mygame</h4>
+                <div class="stauts">
+                    <a href="#">Status</a>
+                    <div class="toogle"><i class="fa-solid fa-toggle-off"></i></div>
+                </div>
+                <a href="adminpanel.html" class="list1"><i class="fa-regular fa-square-check"></i> Bookings</a>
+                <a href="adminNotify.html" class="list2"><i class="fa-regular fa-bell"></i></i> Notify</a>
+                <a href="#" class="list3"><i class="fa-solid fa-trophy"></i> Tournaments</a>
+                <a href="adminSetting.html" class="list4"><i class="fa-solid fa-gear"></i> Setting</a>
+                <a href="#" class="list5"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+            </div>
+        </div>
+      
+      <div class="right">
+        <div class="post-container">
+            <div class="user-profile">
+                <img src="../web-images/gautam chowk fustal.jpg" alt="#">
+                <div>
+                    <p>Chitwan Fustal and Sports Zone</p>
+                   <span>June 24 2023, 13:40 pm</span>
+                </div>
+            </div>
+            <p class="post-text">Hello Everyone from falgun 19, There is going to be held fustal tournament for CSIT student. So, I hope you will participate and make our tournament succesfull. Thank You!</p>
+            <img src="../web-images/tournament1.JPG" class="post-img" alt="#">
+
+            <div class="post-row">
+                <div class="activity-icons">
+                    <div><img src="../web-images/like-blue.png" alt="#"> 120</div>
+                    <div><img src="../web-images/comments.png" alt="#"> 20</div>
+                    <div><img src="../web-images/share.png" alt="#"> 15</div>
+                </div>
+                <div class="post-profile-icon">
+                    <img src="../web-images/gautam chowk fustal.jpg" alt="#"><i class="fa-sharp fa-solid fa-caret-down"></i>
+                </div>
+            </div>
+        </div>
+        <div class="post-container">
+            <div class="user-profile">
+                <img src="../web-images/gautam chowk fustal.jpg" alt="#">
+                <div>
+                    <p>Chitwan Fustal and Sports Zone</p>
+                   <span>June 24 2023, 13:40 pm</span>
+                </div>
+            </div>
+            <p class="post-text">Best Player of the Chitwan Fustal League. #Abishek Shahi</p>
+            <img src="../web-images/abishek.JPG" class="post-img" alt="#">
+
+            <div class="post-row">
+                <div class="activity-icons">
+                    <div><img src="../web-images/like-blue.png" alt="#"> 120</div>
+                    <div><img src="../web-images/comments.png" alt="#"> 20</div>
+                    <div><img src="../web-images/share.png" alt="#"> 15</div>
+                </div>
+                <div class="post-profile-icon">
+                    <img src="../web-images/gautam chowk fustal.jpg" alt="#"><i class="fa-sharp fa-solid fa-caret-down"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="post-container">
+            <div class="user-profile">
+                <img src="../web-images/gautam chowk fustal.jpg" alt="#">
+                <div>
+                    <p>Chitwan Fustal and Sports Zone</p>
+                   <span>May 10 2023, 01:01 pm</span>
+                </div>
+            </div>
+            <p class="post-text">KFC fustal Tournament coming soon.....</p>
+            <img src="../web-images/tournament3.JPG" class="post-img" alt="#">
+
+            <div class="post-row">
+                <div class="activity-icons">
+                    <div><img src="../web-images/like-blue.png" alt="#"> 120</div>
+                    <div><img src="../web-images/comments.png" alt="#"> 20</div>
+                    <div><img src="../web-images/share.png" alt="#"> 15</div>
+                </div>
+                <div class="post-profile-icon">
+                    <img src="../web-images/gautam chowk fustal.jpg" alt="#"><i class="fa-sharp fa-solid fa-caret-down"></i>
+                </div>
+            </div>
+        </div>
+     </div>
+
+     <div class="creating-post">
+        <button>Create new post</button>
+    </div>
+
+    </div>
+
+    <script>
+        var Lists = document.querySelector(".lists");
+        var Bar = document.getElementById("bar");
+        var Close = document.getElementById("close");
+
+        function updatemenu(){
+        Lists.style.display = "block";
+        Lists.style.backgroundColor="#eeeded"
+        Close.style.display="block";
+        Bar.style.display="none";
+    }
+
+    function closebar(){
+        Lists.style.display = "none";
+        Close.style.display="none";
+        Bar.style.display="block";
+        }
+    </script>
+</body>
+</html>

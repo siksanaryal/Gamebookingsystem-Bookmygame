@@ -1,0 +1,159 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin panel</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../css/adminpanel.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="left">
+            <div id="bar" >
+                <i class="fa-solid fa-bars" onclick='updatemenu()'></i>
+            </div>
+            <div id="close" >
+                 <i class="fa-solid fa-x" onclick='closebar()'></i> 
+            </div>
+            <div class="lists">
+                <h4><span>Book</span>mygame</h4>
+                <div class="stauts">
+                    <a href="#">Status</a>
+                    <div class="toogle"><i class="fa-solid fa-toggle-off"></i></div>
+                </div>
+                <a href="#" class="list1"><i class="fa-regular fa-square-check"></i> Bookings</a>
+                <a href="adminnotify.html" class="list2"><i class="fa-regular fa-bell"></i></i> Notify</a>
+                <a href="admintournament.html" class="list3"><i class="fa-solid fa-trophy"></i> Tournaments</a>
+                <a href="adminsetting.html" class="list4"><i class="fa-solid fa-gear"></i> Setting</a>
+                <a href="index.html" class="list5"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+            </div>
+        </div>
+        <div class="right">
+            <div class="booking-page">
+            <div class="days">
+                <p class="today" onclick="today()">Today</p>
+                <p class="tomorrow" onclick="tomorrow()">Tomorrow</p>
+                <p>19 September</p>
+                <p>20 September</p>
+                <p>21 September</p>
+                <p>22 September</p>
+                <p>23 September</p>
+            </div>
+            <div class="booking-time">
+                <div class="time">
+                    <p>08:00am - 09:00am</p>
+                    <div class="booke-or-not">
+                        <img src="../web-images/luffy.jpg" alt="#">
+                        <button>Booked</button>
+                    </div>
+                </div>
+                <div class="time">
+                    <p>09:00am - 10:00am</p>
+                    <div class="booke-or-not">
+                        <img src="../web-images/mikey.jpeg" alt="#">
+                        <button>Booked</button>
+                    </div>
+                </div>
+                <div class="time">
+                    <p>10:00am - 11:00am</p>
+                    <div class="booke-or-not">
+                        <img src="../web-images/takemichi.jpg" alt="#">
+                        <button>Booked</button>
+                    </div>
+                </div>
+                <div class="time">
+                    <p>11:00am - 12:00pm</p>
+                    <div class="booke-or-not">
+                        <img src="../web-images/druaken.png" alt="#">
+                        <button>Booked</button>
+                    </div>
+                </div>
+                <div class="time">
+                    <p>12:00pm - 01:00pm</p>
+                    <div class="booke-or-not">
+                        <img src="../web-images/mikey2.jpeg" alt="#">
+                        <button>Booked</button>
+                    </div>
+                </div>
+                <div class="time">
+                    <p>01:00pm - 02:00pm</p>
+                    <div class="booke-or-not">
+                        <img src="../web-images/luffy.jpg" alt="#">
+                        <button>Booked</button>
+                    </div>
+                </div>
+            </div>
+            <!-- for tomorrow booking -->
+            <div class="booking-time1">
+                <div class="time">
+                    <p>06:00am - 07:00am</p>
+                    <div class="booke-or-not">
+                        <img src="../web-images/luffy.jpg" alt="#">
+                        <button>Booked</button>
+                    </div>
+                </div>
+                <div class="time">
+                    <p>010:00am - 11:00am</p>
+                    <div class="booke-or-not">
+                        <img src="../web-images/mikey.jpeg" alt="#">
+                        <button>Booked</button>
+                    </div>
+                </div>
+                <div class="time">
+                    <p>03:00pm - 04:00pm</p>
+                    <div class="booke-or-not">
+                        <img src="../web-images/takemichi.jpg" alt="#">
+                        <button>Booked</button>
+                    </div>
+                </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <script>
+        let bookingTime = document.querySelector(".booking-time"); 
+        let bookingTime1 = document.querySelector(".booking-time1"); 
+        bookingTime1.style.display = "none";
+        function tomorrow(){
+            bookingTime.style.display = "none";
+            bookingTime1.style.display = "block";
+            document.querySelector(".today").style.border = "none";
+            document.querySelector(".tomorrow").style.borderBottom = "3px solid red";
+        }
+        
+        function today(){
+            bookingTime.style.display = "block";
+            bookingTime1.style.display = "none";
+            document.querySelector(".today").style.borderBottom = "3px solid red";
+            document.querySelector(".tomorrow").style.borderBottom = "none";
+        }
+//  js for resposive side bar
+        var Lists = document.querySelector(".lists");
+        var Bar = document.getElementById("bar");
+        var Close = document.getElementById("close");
+
+        function updatemenu(){
+        Lists.style.display = "block";
+        Lists.style.backgroundColor="#eeeded"
+        Close.style.display="block";
+        Bar.style.display="none";
+    }
+
+    function closebar(){
+        Lists.style.display = "none";
+        Close.style.display="none";
+        Bar.style.display="block";
+        }
+    </script>
+</body>
+
+</html>

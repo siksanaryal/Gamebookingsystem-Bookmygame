@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rating Box</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../css/ratingbox.css">
+</head>
+<body>
+    <div class="rating-box">
+        <button id="close" onclick="closePopup()"><i class="fa-solid fa-xmark"></i></button>
+        <header>How was your experience?</header>
+        <div class="stars">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+        </div>
+        <textarea id="review" cols="32">Give some feedback!!</textarea> <br>
+        <button id="post" onclick="postRating()">Post</button>
+        
+        <div id="message"></div>
+    </div>
+    <script src="ratingbox.js"></script>
+</body>
+</html>

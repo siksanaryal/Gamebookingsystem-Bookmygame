@@ -1,0 +1,82 @@
+adminNotify.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notify</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="../css/adminnotify.css">
+</head>
+<body>
+    <div class="container">
+      <div class="left">
+        <div id="bar" >
+            <i class="fa-solid fa-bars" onclick='updatemenu()'></i>
+        </div>
+        <div id="close" >
+             <i class="fa-solid fa-x" onclick='closebar()'></i> 
+        </div>
+            <div class="lists">
+                
+                <h4><span>Book</span>mygame</h4>
+                <div class="stauts">
+                    <a href="#">Status</a>
+                    <div class="toogle"><i class="fa-solid fa-toggle-off"></i></div>
+                </div>
+                <a href="adminpanel.html" class="list1""><i class="fa-regular fa-square-check"></i> Bookings</a>
+                <a href="#" class="list2"><i class="fa-regular fa-bell"></i></i> Notify</a>
+                <a href="admintournament.html" class="list3"><i class="fa-solid fa-trophy"></i> Tournaments</a>
+                <a href="adminsetting.html" class="list4"><i class="fa-solid fa-gear"></i> Setting</a>
+                <a href="#" class="list5"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+            </div>
+        </div>
+      <!-- for Notify page -->
+      <div class="right">
+        <button>Create new message</button>
+        <p class="notify-day">Yesterday</p>
+        <div class="notify1">
+              <img src="../web-images/shardapur fustal.jpg" alt="#">
+              <p>Today, At 5pm to 6pm there is available of booking. So, anyone who is interested can book.Thank you!</p>
+        </div>
+        <p class="notify-day">2 days ago</p>
+        <div class="notify1">
+              <img src="../web-images/shardapur fustal.jpg" alt="#">
+              <p>Today, At 5pm to 6pm there is available of booking. So, anyone who is interested can book.Thank you!</p>
+        </div>
+        <p class="notify-day">1 week ago</p>
+        <div class="notify1">
+              <img src="../web-images/shardapur fustal.jpg" alt="#">
+              <p>Today, At 5pm to 6pm there is available of booking. So, anyone who is interested can book.Thank you!</p>
+        </div>
+        <p class="notify-day">1 month ago</p>
+        <div class="notify1">
+              <img src="../web-images/shardapur fustal.jpg" alt="#">
+              <p>Today, At 5pm to 6pm there is available of booking. So, anyone who is interested can book.Thank you!</p>
+        </div>
+     </div>
+      <script>
+        var Lists = document.querySelector(".lists");
+        var Bar = document.getElementById("bar");
+        var Close = document.getElementById("close");
+
+        function updatemenu(){
+        Lists.style.display = "block";
+        Lists.style.backgroundColor="#eeeded"
+        Close.style.display="block";
+        Bar.style.display="none";
+    }
+
+    function closebar(){
+        Lists.style.display = "none";
+        Close.style.display="none";
+        Bar.style.display="block";
+        }
+     </script>
+
+
+    </div>
+</body>
+</html>
